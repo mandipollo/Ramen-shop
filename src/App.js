@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// import components
+import Header from "./Components/Layout/Header/Header";
+import RestaurantDescription from "./Components/Layout/Content/RestaurantDescription";
+import Menu from "./Components/Layout/Content/Menu.js";
+
+// import css module
+import classes from "../src/app.module.css";
+
+const App = props => {
+	return (
+		<div className={classes.app}>
+			<Header />
+			<RestaurantDescription />
+			<Menu />
+		</div>
+	);
+};
 
 export default App;

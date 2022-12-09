@@ -1,0 +1,10 @@
+.cardAdd {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.card-show {
+	width: 70px;
+	height: 30px;
+}

@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.app {
+	background-image: url(/src/Components/Assets/homemade-japanese-pork-ramen-noodles-with-eggs-ingredients-black-backdrop_23-2148123639.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+}

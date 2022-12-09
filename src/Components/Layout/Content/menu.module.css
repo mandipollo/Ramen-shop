@@ -1,0 +1,19 @@
+.menu {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 10px;
+	color: white;
+	justify-items: center;
+	flex: 30%;
+}
+
+.menu-items {
+	display: grid;
+	width: 100px;
+	height: 100px;
+	align-items: center;
+}
+
+.menu-price {
+	font-size: larger;
+}
