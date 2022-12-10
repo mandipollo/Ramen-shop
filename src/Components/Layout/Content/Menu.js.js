@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "../Content/menu.module.css";
-import { loremIpsum } from "react-lorem-ipsum";
 
 //import custom components
 import Card, { CardTitle, CardDescription, CardPrice } from "../Card/Card";
 import CardAdd from "../Card/CardAdd";
+import CardShow from "../Card/CardShow";
 import Button from "../../Ui/Button";
 import Input from "../../Ui/Input";
 
@@ -23,7 +23,7 @@ const Menu = props => {
 				<CardAdd>
 					<CardPrice className={classes[`menu-price`]}>Price: 31£</CardPrice>
 					<Button>+</Button>
-					<Input></Input>
+					<CardShow>0</CardShow>
 					<Button>-</Button>
 				</CardAdd>
 			</Card>
@@ -38,7 +38,7 @@ const Menu = props => {
 				<CardAdd>
 					<CardPrice className={classes[`menu-price`]}>Price: 41£</CardPrice>
 					<Button>+</Button>
-					<Input></Input>
+					<CardShow>0</CardShow>
 					<Button>-</Button>
 				</CardAdd>
 			</Card>
@@ -53,7 +53,7 @@ const Menu = props => {
 				<CardAdd>
 					<CardPrice className={classes[`menu-price`]}>Price: 11£</CardPrice>
 					<Button>+</Button>
-					<Input></Input>
+					<CardShow>0</CardShow>
 					<Button>-</Button>
 				</CardAdd>
 			</Card>

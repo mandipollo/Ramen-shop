@@ -1,0 +1,10 @@
+.quantity {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	width: 100px;
+	height: 40px;
+	margin-bottom: 10px;
+	color: black;
+}
