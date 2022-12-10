@@ -6,7 +6,6 @@ import Card, { CardTitle, CardDescription, CardPrice } from "../Card/Card";
 import CardAdd from "../Card/CardAdd";
 import CardShow from "../Card/CardShow";
 import Button from "../../Ui/Button";
-import Input from "../../Ui/Input";
 
 const Menu = props => {
 	return (
