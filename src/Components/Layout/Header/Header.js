@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import classes from "../Header/header.module.css";
-import Button from "../../Ui/Button";
+import ContextMenu from "../../Context/ContextMenu";
 
 const Header = props => {
+	const { totalNu } = useContext(ContextMenu);
 	return (
 		// <div className={classes.header}>
 		// 	<Button className={classes.link}>MENU</Button>
@@ -19,6 +20,7 @@ const Header = props => {
 			<button className={classes.link}>BLOG</button>
 			<button className={classes.link}>ABOUT</button>
 			<button className={classes.highlight}>ORDER ONLINE</button>
+			<div className={classes.link}>Total {totalNu}</div>
 		</div>
 	);
 };

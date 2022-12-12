@@ -17,10 +17,21 @@ const App = props => {
 
 	const [menu3, setMenu3] = useState(0);
 
+	const [totalNu, setTotalNu] = useState(0);
+
 	return (
 		<div className={classes.app}>
 			<ContextMenu.Provider
-				value={{ menu1, setMenu1, menu2, setMenu2, menu3, setMenu3 }}
+				value={{
+					menu1,
+					setMenu1,
+					menu2,
+					setMenu2,
+					menu3,
+					setMenu3,
+					totalNu,
+					setTotalNu,
+				}}
 			>
 				<Header />
 				<RestaurantDescription />
