@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import classes from "../Content/menu.module.css";
 
 //import custom components
@@ -9,42 +9,44 @@ import CardShow from "../Card/CardShow";
 import Button from "../../Ui/Button";
 
 const Menu = props => {
-	const { menu1, setMenu1, menu2, setMenu2, menu3, setMenu3, setTotalNu } =
-		useContext(ContextMenu);
+	const {
+		menu1,
+		setMenu1,
+		menu2,
+		setMenu2,
+		menu3,
+		setMenu3,
+		totalNumberHandler,
+	} = useContext(ContextMenu);
 
-	const incrementMenu1Handler = props => {
-		setMenu1(menu1 + 1);
-		setTotalNu(menu1 + menu2 + menu3);
-		console.log(`menu1`);
+	useEffect(() => {
+		totalNumberHandler();
+	}, [menu1, menu2, menu3, totalNumberHandler]);
+
+	const incrementMenu1Handler = () => {
+		setMenu1(menu1 => menu1 + 1);
 	};
 
 	const decrementMenu1Handler = props => {
 		if (menu1 <= 0) return;
 		setMenu1(menu1 - 1);
-		setTotalNu(menu1 + menu2 + menu3);
 	};
 	const incrementMenu2Handler = props => {
 		setMenu2(menu2 + 1);
-		setTotalNu(menu1 + menu2 + menu3);
-		console.log(`menu2`);
 	};
 
 	const decrementMenu2Handler = props => {
 		if (menu2 <= 0) return;
 		setMenu2(menu2 - 1);
-		setTotalNu(menu1 + menu2 + menu3);
 	};
 
 	const incrementMenu3Handler = props => {
 		setMenu3(menu3 + 1);
-		setTotalNu(menu1 + menu2 + menu3);
-		console.log(`menu3`);
 	};
 
 	const decrementMenu3Handler = props => {
 		if (menu3 <= 0) return;
 		setMenu3(menu3 - 1);
-		setTotalNu(menu1 + menu2 + menu3);
 	};
 
 	return (

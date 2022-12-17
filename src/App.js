@@ -19,6 +19,10 @@ const App = props => {
 
 	const [totalNu, setTotalNu] = useState(0);
 
+	const totalNumberHandler = () => {
+		setTotalNu(menu1 + menu2 + menu3);
+	};
+
 	return (
 		<div className={classes.app}>
 			<ContextMenu.Provider
@@ -31,6 +35,7 @@ const App = props => {
 					setMenu3,
 					totalNu,
 					setTotalNu,
+					totalNumberHandler,
 				}}
 			>
 				<Header />
